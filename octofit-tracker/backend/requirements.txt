@@ -1,0 +1,2 @@
+# Add Django as a dependency for the backend
+Django>=3.2,<4.0
