@@ -43,7 +43,6 @@ CORS_ALLOW_METHODS = [
     'POST',
     'PUT',
     'PATCH',
-    'DELETE',
     'OPTIONS',
 ]
 CORS_ALLOW_HEADERS = [
@@ -54,3 +53,28 @@ CORS_ALLOW_HEADERS = [
 
 # Allow all hosts
 ALLOWED_HOSTS = ['*']
+
+# Add a SECRET_KEY for Django
+SECRET_KEY = 'your-secret-key-here'
+
+# Add TEMPLATES configuration for Django
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
+# Add the octofit_tracker app to INSTALLED_APPS
+INSTALLED_APPS += [
+    'octofit_tracker',
+]
